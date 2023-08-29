@@ -6,7 +6,9 @@ from kivy.uix.label import Label
 
 from android.permissions import Permission, request_permissions, check_permission
 from android.storage import app_storage_path, primary_external_storage_path, secondary_external_storage_path
+from kivy.config import Config
 
+Config.set('kivy', 'log_dir', '/storage/emulated/0/')
 def log(msg):
     Logger.info(msg)
 
